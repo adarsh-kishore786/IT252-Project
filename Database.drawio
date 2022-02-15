@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-02-15T10:30:08.767Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.87 Safari/537.36" etag="zIS5ejQH8Xa6QpeRRKKP" version="16.5.6" type="github">
+<mxfile host="app.diagrams.net" modified="2022-02-15T10:37:43.473Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.87 Safari/537.36" etag="NzR3IkoXsTuUGr_lPp8i" version="16.5.6" type="github">
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
     <mxGraphModel dx="1038" dy="621" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
@@ -51,7 +51,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="RpgIOE0p2ZTJR40vyNeJ-9" value="Passenger" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;" parent="1" vertex="1">
-          <mxGeometry x="530" y="510" width="290" height="90" as="geometry" />
+          <mxGeometry x="530" y="515" width="290" height="90" as="geometry" />
         </mxCell>
         <mxCell id="RpgIOE0p2ZTJR40vyNeJ-10" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;" parent="RpgIOE0p2ZTJR40vyNeJ-9" vertex="1">
           <mxGeometry y="30" width="290" height="30" as="geometry" />
@@ -167,7 +167,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="5cgS5gC3nsyXIrHYZKxY-3" value="Flights" style="swimlane;" vertex="1" parent="1">
-          <mxGeometry x="1150" y="870" width="200" height="180" as="geometry" />
+          <mxGeometry x="1150" y="880" width="200" height="180" as="geometry" />
         </mxCell>
         <mxCell id="5cgS5gC3nsyXIrHYZKxY-6" value="&lt;u&gt;flight_id&lt;/u&gt;&lt;br&gt;&lt;u&gt;passenger_id&lt;/u&gt;&lt;br&gt;&lt;u&gt;pilot_id&lt;/u&gt;&lt;br&gt;&lt;br&gt;from_city&lt;br&gt;to_city&lt;br&gt;departure_time&lt;br&gt;arrival_time" style="whiteSpace=wrap;html=1;" vertex="1" parent="5cgS5gC3nsyXIrHYZKxY-3">
           <mxGeometry y="20" width="200" height="160" as="geometry" />
@@ -176,7 +176,40 @@
           <mxGeometry x="1140" y="510" width="200" height="100" as="geometry" />
         </mxCell>
         <mxCell id="5cgS5gC3nsyXIrHYZKxY-12" value="&lt;u&gt;passenger_id&lt;/u&gt;&amp;nbsp;&lt;br&gt;flight class&lt;br&gt;&lt;u&gt;flight_id&lt;br&gt;&lt;br&gt;&lt;/u&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="5cgS5gC3nsyXIrHYZKxY-11">
-          <mxGeometry y="20" width="200" height="90" as="geometry" />
+          <mxGeometry y="20" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="5cgS5gC3nsyXIrHYZKxY-21" value="" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="940" y="520" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="5cgS5gC3nsyXIrHYZKxY-22" value="" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1200" y="710" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="5cgS5gC3nsyXIrHYZKxY-25" value="" style="swimlane;startSize=0;" vertex="1" parent="1">
+          <mxGeometry x="1130" y="500" width="220" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="5cgS5gC3nsyXIrHYZKxY-26" value="" style="shape=link;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="5cgS5gC3nsyXIrHYZKxY-25" target="5cgS5gC3nsyXIrHYZKxY-22">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="1010" y="710" as="sourcePoint" />
+            <mxPoint x="1110" y="710" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5cgS5gC3nsyXIrHYZKxY-29" value="" style="shape=link;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="5cgS5gC3nsyXIrHYZKxY-21" target="5cgS5gC3nsyXIrHYZKxY-25">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="1020" y="559.5" as="sourcePoint" />
+            <mxPoint x="1120" y="559.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5cgS5gC3nsyXIrHYZKxY-30" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.456;entryY=-0.006;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="5cgS5gC3nsyXIrHYZKxY-22" target="5cgS5gC3nsyXIrHYZKxY-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1030" y="730" as="sourcePoint" />
+            <mxPoint x="1080" y="680" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5cgS5gC3nsyXIrHYZKxY-31" value="" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="5cgS5gC3nsyXIrHYZKxY-21" target="RpgIOE0p2ZTJR40vyNeJ-10">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1050" y="650" as="sourcePoint" />
+            <mxPoint x="1100" y="600" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
