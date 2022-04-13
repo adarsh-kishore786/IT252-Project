@@ -61,10 +61,17 @@ create table Flight (
     Terminal_no varchar(5)
 );
 
+alter table Flight
+add constraint FK_Flight_Pilot foreign key (Pilot_id) references Pilot(Pilot_id);
 
+alter table Flight
+add constraint FK_Flight_Passenger foreign key (Passenger_id) references Passenger(Passenger_id);
 
+alter table Flight
+add constraint FK_Flight_Staff foreign key (Staff_id) references Staff(Staff_id);
 
+alter table Flight
+add constraint FK_Flight_Terminal foreign key (Terminal_no) references Terminal(Terminal_no);
 
-
-
-
+alter table Passenger
+add constraint FK_Passenger_Ticket foreign key (Ticket_id) references Ticket(Ticket_id);
