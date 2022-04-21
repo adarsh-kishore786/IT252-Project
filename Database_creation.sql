@@ -65,3 +65,4 @@ add constraint FK_Ticket_Passenger foreign key (Passenger_id) references Passeng
 
 alter table Terminal
 add constraint FK_Terminal_Ticket foreign key (Ticket_id) references Ticket (Ticket_id);
+
