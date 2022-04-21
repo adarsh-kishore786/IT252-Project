@@ -29,9 +29,10 @@ create table Passenger (
 );
 
 create table Terminal (
-	Terminal_no varchar(5) primary key,
+	Terminal_no varchar(5),
 	Ticket_id varchar(10),
-    Boarding_time time not null
+    Boarding_time time not null,
+    primary key (Terminal_no, Ticket_id, Boarding_time)
 );
 
 create table Ticket (
