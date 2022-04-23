@@ -1,7 +1,7 @@
 insert into Pilot values
-("PL001", "Arun", "1998-01-30", "M", NULL, 9876543210),
-("PL002", "Solo", "1977-12-31", "M", NULL, 7663655443),
-("PL003", "Perk", "1974-10-28", "M", NULL, 7663655345),
+-- ("PL001", "Arun", "1998-01-30", "M", NULL, 9876543210),
+-- ("PL002", "Solo", "1977-12-31", "M", NULL, 7663655443),
+-- ("PL003", "Perk", "1974-10-28", "M", NULL, 7663655345),
 ("PL004", "Munch", "1976-10-11", "M", NULL, 9833333455),
 ("PL005", "Alex", "1974-07-24", "M", NULL, 981212122),
 ("PL006", "Pinto", "1974-10-25", "M", NULL, 8456231523),
@@ -14,7 +14,9 @@ insert into Staff values
 -- ("ST001", "Harish", "1997-02-26", "M", NULL, 1234567890);
 -- ("ST002", "Potter", "1986-03-21", "M", NULL, 532345342);
 -- ("ST003", "Jenny", "1996-07-21", "F", NULL, 532345321);
-("ST004", "Cherry", "2000-01-11", "F", NULL, 532345357);
+-- ("ST004", "Cherry", "2000-01-11", "F", NULL, 532345357);
+-- ("ST005", "Oslo", "1986-02-04", "M", "San Andreas", 23245244);
+("ST006", "Jane", "2002-3-2", "F", "Montreal", 3234221);
 
 
 insert into Passenger values
@@ -40,7 +42,9 @@ insert into Flight values
 -- ("FL007", "PL001", "ST003", "PS007", "New York", "Singapore", "00:40:00", "07:00:00");
 -- ("FL008", "PL002", "ST003", "PS008", "Mumbai", "Bangalore", "01:00:00", "03:00:00");
 -- ("FL009", "PL001", "ST001", "PS009", "Patna", "Mangalore", "12:30:00", "18:00:00");
-("FL010", "PL003", "ST002", "PS010", "Pune", "Hyderabad", "15:30:00", "18:00:00");
+-- ("FL010", "PL003", "ST002", "PS010", "Pune", "Hyderabad", "15:30:00", "18:00:00");
+-- ("FL011", "PL004", "ST005", "PS009", "San Andreas", "Montreal", "11:30:00", "00:00:00");
+("FL012", "PL008", "ST002", "PS004", "Cairo", "Tokyo", "08:00:00", "23:30:00");
 
 insert into Ticket values
 -- ("TK001", "PS001", "Economy")
