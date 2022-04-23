@@ -67,5 +67,5 @@ insert into Terminal values
 -- ("T2", "TK006", "12:30:00");
 ("T4", "TK005", "15:00:00");
 
-If getting data already entered error,
+-- If getting data already entered error,
 -- comment out the line that is causing error.
