@@ -13,3 +13,16 @@ begin
 	return arrival_time;
 end$$
 delimiter ;
+
+delimiter $$
+create function in_flight_time(dept time, arr time)
+returns time deterministic
+begin
+	declare result time;
+	select timediff(arr, dept) into result;
+    if (result < '00:00:00') then
+	set result = addtime(result, '24:00:00');
+	end if;
+    return result;
+end $$
+delimiter ;
