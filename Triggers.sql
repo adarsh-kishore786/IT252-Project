@@ -1,10 +1,4 @@
-select * from Flight;
-select * from Passenger;
-select * from Pilot;
-select * from Staff;
-select * from Terminal;
-select * from Ticket;
-
+-- create a Terminal for every new ticket
 DELIMITER $$
 CREATE TRIGGER `Flight_Terminal` 
 after insert 
@@ -16,6 +10,7 @@ END
 $$
 DELIMITER ;
 
+-- don't delete currently flying flights
 DELIMITER $$
 CREATE TRIGGER `Flight_Passenger` 
 after delete 
@@ -28,6 +23,7 @@ BEGIN
 end$$
 DELIMITER ;
 
+-- don't update From_city = To_city
 DELIMITER $$
 CREATE TRIGGER `Cities` 
 after update 

@@ -1,3 +1,4 @@
+-- find flights which are currently flying
 DELIMITER $$
 create procedure flying_flights()
 begin
@@ -6,6 +7,7 @@ Departure_time < now() && now() < Arrival_time;
 end $$
 delimiter ;
 
+-- find people who have two or more flights
 delimiter $$
 create procedure busy_people()
 begin
@@ -15,5 +17,31 @@ begin
     from Ticket T1 join Passenger P1 
     on T1.Passenger_id = P1.Passenger_id 
     where P1.Passenger_id = P.Passenger_id) > 1;
+end $$
+delimiter ;
+
+-- find passengers whose address is known
+delimiter $$
+create procedure know_address()
+begin
+	select * from Passenger where Address is not null;
+end $$
+delimiter ;
+
+-- find oldest pilots
+delimiter $$
+create procedure oldest_pilots(IN lim INT)
+begin
+	select * from Pilot order by DOB
+    limit lim;
+end $$
+delimiter ;
+
+-- find pilots which do not fly any ship
+delimiter $$
+create procedure not_flying(out ct int)
+begin
+	select * from Pilot where Pilot_id not in (select Pilot_id from Flight);
+	select Count(Pilot_id) from Pilot where Pilot_id not in (select Pilot_id from Flight) into ct;
 end $$
 delimiter ;
