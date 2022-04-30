@@ -13,13 +13,13 @@ union all
 
 select * from reachable_from;
 
-create view flight_pilot_details as select Fl.Flight_id, Pi.Pilot_id, Pi.Name from Flight Fl, Pilot Pi where Fl.Flight_id = Pi.Flight_id;
+create view flight_pilot_details as select * from Flight Fl natural join Pilot Pi;
 select * from flight_pilot_details;
 
 create view flight_staff_details as select Fl.Flight_id, St.Staff_id, St.Name from Flight Fl, Staff St where Fl.Flight_id = St.Flight_id;
 select * from flight_staff_details;
 
-create view afternoon_departures as select Flight_id, From_city, To_city, Departure_time from Flight where Departure_time > "12:00:00" and Departure_time < "17:00:00" ;
+create view afternoon_departures as select * from flight_pilot_details where Departure_time > "12:00:00" and Departure_time < "17:00:00" ;
 select * from afternoon_departures;
 
 create view ticket_details as select Ti.Ticket_id, Ti.Flight_id, Ti.Passenger_id, Ps.Name, Ps.Contact_no from Ticket Ti, Passenger Ps where Ps.Passenger_id = Ti.Passenger_id;
