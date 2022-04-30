@@ -8,10 +8,6 @@ SELECT * FROM
   (SELECT count(*) as TicketsInMorning from Ticket where Ticket.Flight_id in (SELECT distinct(Flight.Flight_id) FROM Flight WHERE Departure_time < "12:00:00")) MorningTickets,
   (SELECT count(*) as TotalTickets FROM Ticket)  TotalTickets;
 
-
-
-
-
 -- Joins :-
 
 -- display count of passengers arriving in Mangalore
