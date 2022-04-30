@@ -57,7 +57,7 @@ delimiter $$
 create function can_fly(age int)
 returns varchar(3) deterministic
 begin
-	if (age >= 25) then
+	if (age >= 25 AND age<=60) then
     return "YES";
     else
     return "NO";
