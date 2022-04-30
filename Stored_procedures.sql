@@ -37,7 +37,7 @@ begin
 end $$
 delimiter ;
 
--- find pilots which do not fly any ship
+-- find pilots which do not fly any Vessel
 delimiter $$
 create procedure not_flying(out ct int)
 begin
