@@ -1,3 +1,4 @@
+
 create database Airport;
 use Airport;
 
