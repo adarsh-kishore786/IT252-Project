@@ -35,7 +35,7 @@ create table Passenger (
     DOB date not null,
     Gender char(1),
     Address varchar(30),
-    Contact_no long NOT NULL,
+    Contact_no long NOT NULL
 );
 
 create table Terminal (
