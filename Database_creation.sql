@@ -1,6 +1,14 @@
 create database Airport;
 use Airport;
 
+create table Flight (
+    Flight_id varchar(10) primary key,
+    From_city varchar(20) not null,
+    To_city varchar(20) not null,
+    Departure_time time not null,
+    Arrival_time time not null
+);
+
 create table Pilot (
 	Pilot_id varchar(10) primary key,
     Flight_id varchar(10),
@@ -44,13 +52,6 @@ create table Ticket (
     Flight_class varchar(10) not null
 );
 
-create table Flight (
-    Flight_id varchar(10) primary key,
-    From_city varchar(20) not null,
-    To_city varchar(20) not null,
-    Departure_time time not null,
-    Arrival_time time not null
-);
 
 alter table Ticket
 add constraint FK_Ticket_Passenger foreign key (Passenger_id) references Passenger(Passenger_id); 
