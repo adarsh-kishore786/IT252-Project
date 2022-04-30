@@ -18,10 +18,10 @@ insert into Pilot values
 ("PL001","FL001", "Arun", "1998-01-30", "M", NULL, 9876543210),
 ("PL002","FL002", "Solo", "1977-12-31", "M", NULL, 7663655443),
 ("PL003","FL003", "Perk", "1974-10-28", "M", NULL, 7663655345),
-("PL004","FL004", "Munch", "1976-10-11", "M", NULL, 9833333455),
+("PL004","FL002", "Munch", "1976-10-11", "M", NULL, 9833333455),
 ("PL005","FL005", "Alex", "1974-07-24", "M", NULL, 981212122),
 ("PL006","FL006", "Pinto", "1974-10-25", "M", NULL, 8456231523),
-("PL007","FL007", "Percy", "1974-07-21", "M", NULL, 7836316412),
+("PL007","FL001", "Percy", "1974-07-21", "M", NULL, 7836316412),
 ("PL008","FL008", "Jack", "1974-02-14", "M", NULL, 6048987034),
 ("PL009","FL009", "Ayman", "1974-07-13", "M", NULL, 7663655345);
 
@@ -57,7 +57,7 @@ insert into Ticket values
 ("TK007", "FL007", "PS007", "FirstClass"),
 ("TK008", "FL008", "PS008", "Economy"),
 ("TK009", "FL009", "PS009", "FirstClass"),
-("TK010", "FL0010", "PS010", "Economy");
+("TK010", "FL010", "PS010", "Economy");
 
 insert into Terminal values
 ("T2", "TK001", "12:00:00"),

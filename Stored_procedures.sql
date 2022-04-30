@@ -11,11 +11,11 @@ delimiter ;
 delimiter $$
 create procedure busy_people()
 begin
-	select P.*, T.Ticket_id from Passenger P join Ticket T 
-    on P.Passenger_id = T.Passenger_id 
-    where (select count(T1.Ticket_id) 
-    from Ticket T1 join Passenger P1 
-    on T1.Passenger_id = P1.Passenger_id 
+	select P.*, T.Ticket_id from Passenger P join Ticket T
+    on P.Passenger_id = T.Passenger_id
+    where (select count(T1.Ticket_id)
+    from Ticket T1 join Passenger P1
+    on T1.Passenger_id = P1.Passenger_id
     where P1.Passenger_id = P.Passenger_id) > 1;
 end $$
 delimiter ;
@@ -37,11 +37,11 @@ begin
 end $$
 delimiter ;
 
--- find pilots which do not fly any Vessel
+-- find vessels which are out of commission
 delimiter $$
 create procedure not_flying(out ct int)
 begin
-	select * from Pilot where Pilot_id not in (select Pilot_id from Flight);
-	select Count(Pilot_id) from Pilot where Pilot_id not in (select Pilot_id from Flight) into ct;
+	select * from Flight where Flight_id not in (select P.Flight_id from Flight F  join Pilot P on P.Flight_id = F.Flight_id);
+	select Count(Flight_id) from Flight where Flight_id not in (select P.Flight_id from Flight F join Pilot P on P.Flight_id = F.Flight_id) into ct;
 end $$
 delimiter ;
