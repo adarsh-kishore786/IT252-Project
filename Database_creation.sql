@@ -35,14 +35,14 @@ create table Passenger (
     DOB date not null,
     Gender char(1),
     Address varchar(30),
-    Contact_no long NOT NULL
+    Contact_no long NOT NULL,
 );
 
 create table Terminal (
 	Terminal_no varchar(5),
 	Ticket_id varchar(10),
     Boarding_time time not null,
-    primary key (Terminal_no, Ticket_id)
+    primary key (Terminal_no, Ticket_id, Boarding_time)
 );
 
 create table Ticket (
